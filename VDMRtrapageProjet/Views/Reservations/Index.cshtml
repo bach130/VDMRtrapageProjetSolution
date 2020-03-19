@@ -1,0 +1,57 @@
+﻿@model IEnumerable<VDMRtrapageProjet.Models.Reservation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.personne.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salle.NomSalle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.theme.NomTheme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateDeReservation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tarif)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.personne.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salle.NomSalle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.theme.NomTheme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateDeReservation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tarif)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResrvationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResrvationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResrvationId })
+        </td>
+    </tr>
+}
+
+</table>

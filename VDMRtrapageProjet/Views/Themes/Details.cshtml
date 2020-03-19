@@ -1,0 +1,26 @@
+﻿@model VDMRtrapageProjet.Models.Theme
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Theme</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomTheme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomTheme)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ThemeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

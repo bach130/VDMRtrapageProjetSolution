@@ -1,0 +1,64 @@
+﻿@model VDMRtrapageProjet.Models.Reservation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.personne.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personne.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salle.NomSalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salle.NomSalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.theme.NomTheme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.theme.NomTheme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDeReservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDeReservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tarif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tarif)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

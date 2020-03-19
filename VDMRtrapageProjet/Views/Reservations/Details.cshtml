@@ -1,0 +1,58 @@
+﻿@model VDMRtrapageProjet.Models.Reservation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.personne.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personne.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salle.NomSalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salle.NomSalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.theme.NomTheme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.theme.NomTheme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDeReservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDeReservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tarif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tarif)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResrvationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
